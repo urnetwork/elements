@@ -31,6 +31,15 @@ html {
 }
 
 :root {
+	/**
+	 * Font Families
+	 */
+	--font-family-base:
+		"PpNeueMontrealRegular", system-ui, -apple-system, sans-serif;
+
+	/**
+	 * Color Palette
+	 */
 	--color-white: #f8f8f8;
 	--color-black: #101010;
 	--color-blue-electric: #0039de;
