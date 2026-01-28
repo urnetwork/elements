@@ -8,10 +8,17 @@
 		<link rel="stylesheet" href="./src/index.css" />
 		<script type="module" src="/src/my-element.ts"></script>
 		<script type="module" src="/src/components/button"></script>
+		<script type="module" src="/src/components/input/"></script>
 	</head>
-	<body style="padding: 16px">
+	<body style="padding: 16px; background: var(--color-black)">
 		<div style="display: flex; flex-flow: column">
-			<h2 style="font-family: &quot;PpNeueBitBold&quot;, system-ui, sans-serif">
+			<!-- Buttons -->
+			<h2
+				style="
+					font-family: PpNeueBitBold, system-ui, sans-serif;
+					color: var(--color-white);
+				"
+			>
 				Buttons
 			</h2>
 
@@ -22,7 +29,43 @@
 				<ur-button loading>Loading</ur-button>
 			</div>
 
-			<ur-button fullwidth>Full width</ur-button>
+			<div style="display: flex; gap: 8px; margin-bottom: 16px; width: 300px">
+				<ur-button fullwidth>Full width</ur-button>
+			</div>
+
+			<!-- Inputs -->
+			<h2
+				style="
+					font-family: PpNeueBitBold, system-ui, sans-serif;
+					color: var(--color-white);
+				"
+			>
+				Inputs
+			</h2>
+
+			<div
+				style="
+					display: flex;
+					flex-direction: column;
+					gap: 32px;
+					max-width: 300px;
+				"
+			>
+				<ur-input label="Text" placeholder="Enter some text"></ur-input>
+				<ur-input label="Password" type="password"></ur-input>
+				<ur-input
+					label="Readonly"
+					value="You can't change this"
+					readonly
+				></ur-input>
+				<ur-input label="Disabled" disabled value="Cannot edit this"></ur-input>
+				<ur-input label="With error" error="Invalid email address"></ur-input>
+				<ur-input
+					label="Spinner"
+					value="Processing something"
+					loading
+				></ur-input>
+			</div>
 		</div>
 	</body>
 </html>

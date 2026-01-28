@@ -4,6 +4,7 @@ import { customElement, property } from "lit/decorators.js";
 @customElement("ur-spinner")
 export class Spinner extends LitElement {
 	@property({ type: Number }) size: number = 40;
+	@property({ type: String }) color: "white" | "gray-dark" = "gray-dark";
 
 	static styles = css`
 		.spinner {
@@ -23,10 +24,21 @@ export class Spinner extends LitElement {
 		}
 	`;
 
+	get borderColor() {
+		return this.color === "white"
+			? "var(--color-white, #f8f8f8)"
+			: "var(--color-gray-dark, #909090)";
+	}
+
 	render() {
 		return html`<div
 			class="spinner"
-			style="width: ${this.size}px; height: ${this.size}px;"
+			style="
+				width: ${this.size}px;
+				height: ${this.size}px;
+				border-color: ${this.borderColor};
+				border-top-color: transparent;
+			"
 		></div>`;
 	}
 }
