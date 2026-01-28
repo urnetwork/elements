@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>URnetwork UI Elements</title>
+		<link rel="stylesheet" href="./src/index.css" />
+		<script type="module" src="/src/my-element.ts"></script>
+		<script type="module" src="/src/components/button"></script>
+	</head>
+	<body style="padding: 16px">
+		<div style="display: flex; flex-flow: column">
+			<h2 style="font-family: &quot;PpNeueBitBold&quot;, system-ui, sans-serif">
+				Buttons
+			</h2>
+
+			<div style="display: flex; gap: 8px; margin-bottom: 16px">
+				<ur-button>Connect</ur-button>
+				<ur-button variant="secondary">Connect</ur-button>
+				<ur-button disabled>Disabled primary</ur-button>
+				<ur-button loading>Loading</ur-button>
+			</div>
+
+			<ur-button fullwidth>Full width</ur-button>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,82 @@
+@font-face {
+	font-family: "AbcGravityExtended";
+	src: url("./assets/fonts/abcgravity_extended.otf") format("opentype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "AbcGravityExtraCondensed";
+	src: url("./assets/fonts/abcgravity_extra_condensed.otf") format("opentype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "PpNeueBitBold";
+	src: url("./assets/fonts/pp_neue_bit_bold.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "PpNeueMontrealRegular";
+	src: url("./assets/fonts/pp_neue_montreal_regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+html {
+	font-size: 16px; /* 1rem = 16px */
+}
+
+:root {
+	--color-white: #f8f8f8;
+	--color-black: #101010;
+	--color-blue-electric: #0039de;
+	--color-blue-light: #d6e6f4;
+	--color-blue-navy: #1a1460;
+	--color-green: #87fb67;
+	--color-pink: #ed8fff;
+	--color-coral: #ff6c58;
+	--color-yellow-light: #eff7bb;
+	--color-maroon: #421006;
+	--color-gray: #b7b7b7;
+	--color-gray-dark: #909090;
+	/*font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+	font-weight: 400;
+
+	color-scheme: light dark;
+	color: rgba(255, 255, 255, 0.87);
+	background-color: #242424;
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;*/
+}
+
+a {
+	font-weight: 500;
+	color: #646cff;
+	text-decoration: inherit;
+}
+a:hover {
+	color: #535bf2;
+}
+
+body {
+	margin: 0;
+	display: flex;
+	place-items: center;
+	min-width: 320px;
+	min-height: 100vh;
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		color: #213547;
+		background-color: #ffffff;
+	}
+}
