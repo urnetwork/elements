@@ -8,7 +8,7 @@ export class Spinner extends LitElement {
 
 	static styles = css`
 		.spinner {
-			border: 3px solid var(--color-white);
+			border: 3px solid var(--ur-color-white);
 			border-top: 3px solid transparent;
 			border-radius: 50%;
 			animation: spin 1s linear infinite;
@@ -26,8 +26,8 @@ export class Spinner extends LitElement {
 
 	get borderColor() {
 		return this.color === "white"
-			? "var(--color-white, #f8f8f8)"
-			: "var(--color-gray-dark, #909090)";
+			? "var(--ur-color-white, #f8f8f8)"
+			: "var(--ur-color-gray-dark, #909090)";
 	}
 
 	render() {

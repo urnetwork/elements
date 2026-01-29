@@ -34,24 +34,24 @@ html {
 	/**
 	 * Font Families
 	 */
-	--font-family-base:
+	--ur-font-family-base:
 		"PpNeueMontrealRegular", system-ui, -apple-system, sans-serif;
 
 	/**
 	 * Color Palette
 	 */
-	--color-white: #f8f8f8;
-	--color-black: #101010;
-	--color-blue-electric: #0039de;
-	--color-blue-light: #d6e6f4;
-	--color-blue-navy: #1a1460;
-	--color-green: #87fb67;
-	--color-pink: #ed8fff;
-	--color-coral: #ff6c58;
-	--color-yellow-light: #eff7bb;
-	--color-maroon: #421006;
-	--color-gray: #b7b7b7;
-	--color-gray-dark: #909090;
+	--ur-color-white: #f8f8f8;
+	--ur-color-black: #101010;
+	--ur-color-blue-electric: #0039de;
+	--ur-color-blue-light: #d6e6f4;
+	--ur-color-blue-navy: #1a1460;
+	--ur-color-green: #87fb67;
+	--ur-color-pink: #ed8fff;
+	--ur-color-coral: #ff6c58;
+	--ur-color-yellow-light: #eff7bb;
+	--ur-color-maroon: #421006;
+	--ur-color-gray: #b7b7b7;
+	--ur-color-gray-dark: #909090;
 	/*font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
 	line-height: 1.5;
 	font-weight: 400;
