@@ -6,31 +6,22 @@ import dts from "vite-plugin-dts";
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
 
 export default defineConfig({
-	plugins: [
-		dts({
-			include: ["src/**/*"],
-			outDir: "dist",
-		}),
-	],
+	plugins: [dts({ include: ["src/**/*"], outDir: "dist" })],
 	build: {
 		lib: {
 			entry: {
-				// Export your web components
 				"components/button": resolve(
 					__dirname,
 					"src/components/button/index.ts",
 				),
 				"components/input": resolve(__dirname, "src/components/input/index.ts"),
-				// Add other components as needed
-
-				// Export React wrappers
 				"react/button": resolve(__dirname, "src/react/button/index.ts"),
 				"react/input": resolve(__dirname, "src/react/input/index.ts"),
+				styles: resolve(__dirname, "src/styles.ts"),
 			},
-			formats: ["es"], // ESM format
+			formats: ["es"],
 		},
 		rollupOptions: {
-			// Externalize dependencies that shouldn't be bundled
 			external: [
 				"lit",
 				"react",
@@ -38,6 +29,17 @@ export default defineConfig({
 				"@lit/react",
 				"react/jsx-runtime",
 			],
+			output: {
+				// Force the name to be 'styles.css'
+				assetFileNames: (assetInfo) => {
+					if (assetInfo.name && assetInfo.name.endsWith(".css")) {
+						return "assets/styles.css";
+					}
+					return "assets/[name][extname]";
+				},
+			},
 		},
+		assetsInlineLimit: 100000000,
+		cssCodeSplit: true,
 	},
 });

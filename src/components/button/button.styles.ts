@@ -17,31 +17,39 @@ export const btnStyles = css`
 			border-color 0.1s ease;
 	}
 	:host([variant="primary"]) button {
-		background: var(--color-blue-electric);
-		color: var(--color-white);
-		border: 1px solid var(--color-blue-electric);
+		background: var(--ur-color-blue-electric);
+		color: var(--ur-color-white);
+		border: 1px solid var(--ur-color-blue-electric);
 	}
 	:host([variant="primary"]) button:disabled {
-		background: color-mix(in srgb, var(--color-blue-electric) 70%, white 30%);
-		color: var(--color-white);
+		background: color-mix(
+			in srgb,
+			var(--ur-color-blue-electric) 70%,
+			white 30%
+		);
+		color: var(--ur-color-white);
 		border: 1px solid
-			color-mix(in srgb, var(--color-blue-electric) 70%, white 30%);
+			color-mix(in srgb, var(--ur-color-blue-electric) 70%, white 30%);
 		cursor: not-allowed;
 	}
 	:host([variant="primary"]) button:hover:not(:disabled) {
-		background: color-mix(in srgb, var(--color-blue-electric) 85%, white 15%);
+		background: color-mix(
+			in srgb,
+			var(--ur-color-blue-electric) 85%,
+			white 15%
+		);
 		border: 1px solid
-			color-mix(in srgb, var(--color-blue-electric) 85%, white 15%);
+			color-mix(in srgb, var(--ur-color-blue-electric) 85%, white 15%);
 	}
 	:host([variant="secondary"]) button {
 		background: transparent;
-		color: var(--color-gray-dark);
-		border: 1px solid var(--color-gray-dark);
+		color: var(--ur-color-gray-dark);
+		border: 1px solid var(--ur-color-gray-dark);
 	}
 	:host([variant="secondary"]) button:hover:not(:disabled) {
-		background: color-mix(in srgb, var(--color-black, #101010), #fff 2%);
-		border-color: color-mix(in srgb, var(--color-gray-dark) 80%, black 20%);
-		color: color-mix(in srgb, var(--color-gray-dark) 80%, black 20%);
+		background: color-mix(in srgb, var(--ur-color-black, #101010), #fff 2%);
+		border-color: color-mix(in srgb, var(--ur-color-gray-dark) 80%, black 20%);
+		color: color-mix(in srgb, var(--ur-color-gray-dark) 80%, black 20%);
 	}
 	:host([fullwidth]) {
 		display: block;

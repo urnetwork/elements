@@ -21,11 +21,11 @@ export const inputStyles = css`
 	.input-label {
 		font-size: 0.875rem;
 		font-weight: 500;
-		color: var(--color-gray-dark);
+		color: var(--ur-color-gray-dark);
 	}
 
 	.required {
-		color: var(--color-coral);
+		color: var(--ur-color-coral);
 		margin-left: 0.25rem;
 	}
 
@@ -33,56 +33,58 @@ export const inputStyles = css`
 		width: 100%;
 		padding: 0.75rem 1rem;
 		font-size: 1rem;
-		color: var(--color-black, #000);
-		background: color-mix(in srgb, var(--color-black, #101010), #fff 5%);
-		border: 1px solid color-mix(in srgb, var(--color-black, #101010), #fff 10%);
+		color: var(--ur-color-black, #000);
+		background: color-mix(in srgb, var(--ur-color-black, #101010), #fff 5%);
+		border: 1px solid
+			color-mix(in srgb, var(--ur-color-black, #101010), #fff 10%);
 		border-radius: 0.5rem;
 		transition:
 			border-color 0.1s ease,
 			box-shadow 0.1s ease;
 		outline: none;
 		box-sizing: border-box;
-		color: var(--color-white);
+		color: var(--ur-color-white);
 	}
 
 	/* Hover state */
 	.input-field:hover:not([disabled]):not([readonly]) {
-		background: color-mix(in srgb, var(--color-black, #101010), #fff 7%);
-		border-color: color-mix(in srgb, var(--color-black, #101010), #fff 12%);
+		background: color-mix(in srgb, var(--ur-color-black, #101010), #fff 7%);
+		border-color: color-mix(in srgb, var(--ur-color-black, #101010), #fff 12%);
 	}
 
 	.input-field:focus {
-		background: color-mix(in srgb, var(--color-black, #101010), #fff 10%);
-		border: 1px solid color-mix(in srgb, var(--color-black, #101010), #fff 15%);
+		background: color-mix(in srgb, var(--ur-color-black, #101010), #fff 10%);
+		border: 1px solid
+			color-mix(in srgb, var(--ur-color-black, #101010), #fff 15%);
 	}
 
 	.input-field[disabled] {
-		background: color-mix(in srgb, var(--color-black, #101010), #fff 2%);
-		color: color-mix(in srgb, var(--color-gray, #b7b7b7), transparent 60%);
-		border-color: color-mix(in srgb, var(--color-black, #101010), #fff 15%);
+		background: color-mix(in srgb, var(--ur-color-black, #101010), #fff 2%);
+		color: color-mix(in srgb, var(--ur-color-gray, #b7b7b7), transparent 60%);
+		border-color: color-mix(in srgb, var(--ur-color-black, #101010), #fff 15%);
 		cursor: not-allowed;
 		opacity: 0.6;
 	}
 
 	.input-field[readonly] {
-		background: color-mix(in srgb, var(--color-black, #101010), #fff 2%);
+		background: color-mix(in srgb, var(--ur-color-black, #101010), #fff 2%);
 		color: var(--color-white, #f8f8f8);
-		border-color: color-mix(in srgb, var(--color-black, #101010), #fff 15%);
+		border-color: color-mix(in srgb, var(--ur-color-black, #101010), #fff 15%);
 		cursor: default;
 		opacity: 0.6;
 	}
 
 	.input-field.error {
-		border-color: var(--color-coral, #ff6c58);
+		border-color: var(--ur-color-coral, #ff6c58);
 	}
 
 	.input-field.error:focus {
-		border-color: color-mix(in srgb, var(--color-coral, #ff6c58), #fff 15%);
+		border-color: color-mix(in srgb, var(--ur-color-coral, #ff6c58), #fff 15%);
 	}
 
 	.error-message {
 		font-size: 0.875rem;
-		color: var(--color-coral, #ff6c58);
+		color: var(--ur-color-coral, #ff6c58);
 	}
 
 	/* Spinner state */
