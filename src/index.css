@@ -52,40 +52,16 @@ html {
 	--ur-color-maroon: #421006;
 	--ur-color-gray: #b7b7b7;
 	--ur-color-gray-dark: #909090;
-	/*font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-	line-height: 1.5;
-	font-weight: 400;
 
-	color-scheme: light dark;
-	color: rgba(255, 255, 255, 0.87);
-	background-color: #242424;
-
-	font-synthesis: none;
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;*/
-}
-
-a {
-	font-weight: 500;
-	color: #646cff;
-	text-decoration: inherit;
-}
-a:hover {
-	color: #535bf2;
-}
-
-body {
-	margin: 0;
-	display: flex;
-	place-items: center;
-	min-width: 320px;
-	min-height: 100vh;
-}
-
-@media (prefers-color-scheme: light) {
-	:root {
-		color: #213547;
-		background-color: #ffffff;
-	}
+	/**
+   * Spacing Scale
+   * Based on 8px grid system
+   */
+	--ur-space-xs: 0.25rem; /* 4px */
+	--ur-space-sm: 0.5rem; /* 8px */
+	--ur-space-md: 1rem; /* 16px */
+	--ur-space-lg: 1.5rem; /* 24px */
+	--ur-space-xl: 2rem; /* 32px */
+	--ur-space-2xl: 3rem; /* 48px */
+	--ur-space-3xl: 4rem; /* 64px */
 }
