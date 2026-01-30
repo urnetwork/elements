@@ -3,7 +3,7 @@ import { css } from "lit";
 export const btnStyles = css`
 	button {
 		font-family: "PpNeueBitBold", system-ui, sans-serif;
-		font-size: 1.2rem;
+		font-size: 1.4rem;
 		padding: 0.8rem 1.6rem;
 		border-radius: 0.8rem;
 		border: none;

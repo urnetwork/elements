@@ -4,18 +4,22 @@ export const inputStyles = css`
 	:host {
 		display: block;
 		font-family: var(--font-family-base, system-ui, sans-serif);
+		width: 100%;
 	}
 
 	.input-wrapper {
 		display: flex;
 		flex-direction: column;
-		gap: 0.5rem;
+		gap: var(--ur-space-sm, 0.5rem);
+		align-items: flex-start;
+		width: 100%;
 	}
 
 	.input-container {
 		position: relative;
 		display: flex;
 		align-items: center;
+		width: 100%;
 	}
 
 	.input-label {
