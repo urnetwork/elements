@@ -6,12 +6,41 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>URnetwork UI Elements</title>
 		<link rel="stylesheet" href="./src/index.css" />
-		<script type="module" src="/src/my-element.ts"></script>
-		<script type="module" src="/src/components/button"></script>
-		<script type="module" src="/src/components/input/"></script>
+		<script type="module">
+			// Import all components at once
+			import "./src/components/index.ts";
+		</script>
 	</head>
 	<body style="padding: 16px; background: var(--ur-color-black)">
 		<div style="display: flex; flex-flow: column">
+			<!-- Text elements -->
+			<h2
+				style="
+					font-family: PpNeueBitBold, system-ui, sans-serif;
+					color: var(--ur-color-white);
+				"
+			>
+				Text
+			</h2>
+
+			<ur-text variant="header" style="margin-bottom: var(--ur-space-md)">
+				Heading 1
+			</ur-text>
+
+			<ur-text variant="subheader" style="margin-bottom: var(--ur-space-md)">
+				Heading 2
+			</ur-text>
+
+			<ur-text variant="body" style="margin-bottom: var(--ur-space-md)">
+				body text - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+				do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+			</ur-text>
+
+			<ur-text variant="small" style="margin-bottom: var(--ur-space-md)">
+				small text - Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+				Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+			</ur-text>
+
 			<!-- Buttons -->
 			<h2
 				style="
