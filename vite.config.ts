@@ -10,13 +10,10 @@ export default defineConfig({
 	build: {
 		lib: {
 			entry: {
-				"components/button": resolve(
-					__dirname,
-					"src/components/button/index.ts",
-				),
-				"components/input": resolve(__dirname, "src/components/input/index.ts"),
-				"react/button": resolve(__dirname, "src/react/button/index.ts"),
-				"react/input": resolve(__dirname, "src/react/input/index.ts"),
+				// Web components - single entry point
+				components: resolve(__dirname, "src/components/index.ts"),
+				// React wrappers - single entry point
+				react: resolve(__dirname, "src/react/index.ts"),
 				styles: resolve(__dirname, "src/styles.ts"),
 			},
 			formats: ["es"],
@@ -24,13 +21,13 @@ export default defineConfig({
 		rollupOptions: {
 			external: [
 				"lit",
+				"lit/static-html.js",
 				"react",
 				"react-dom",
 				"@lit/react",
 				"react/jsx-runtime",
 			],
 			output: {
-				// Force the name to be 'styles.css'
 				assetFileNames: (assetInfo) => {
 					if (assetInfo.name && assetInfo.name.endsWith(".css")) {
 						return "assets/styles.css";

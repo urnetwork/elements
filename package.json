@@ -4,21 +4,13 @@
 	"type": "module",
 	"exports": {
 		"./styles.css": "./dist/assets/styles.css",
-		"./components/button": {
-			"types": "./dist/components/button/index.d.ts",
-			"default": "./dist/components/button.js"
+		"./components": {
+			"types": "./dist/components/index.d.ts",
+			"default": "./dist/components.js"
 		},
-		"./components/input": {
-			"types": "./dist/components/input/index.d.ts",
-			"default": "./dist/components/input.js"
-		},
-		"./react/button": {
-			"types": "./dist/react/button/index.d.ts",
-			"default": "./dist/react/button.js"
-		},
-		"./react/input": {
-			"types": "./dist/react/input/index.d.ts",
-			"default": "./dist/react/input.js"
+		"./react": {
+			"types": "./dist/react/index.d.ts",
+			"default": "./dist/react.js"
 		}
 	},
 	"scripts": {
