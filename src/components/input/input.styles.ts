@@ -28,6 +28,10 @@ export const inputStyles = css`
 		color: var(--ur-color-gray-dark);
 	}
 
+	.input-label.error {
+		color: var(--ur-color-coral, #ff6c58);
+	}
+
 	.required {
 		color: var(--ur-color-coral);
 		margin-left: 0.25rem;
@@ -86,17 +90,31 @@ export const inputStyles = css`
 		border-color: color-mix(in srgb, var(--ur-color-coral, #ff6c58), #fff 15%);
 	}
 
-	.error-message {
+	/*.error-message {
 		font-size: 0.875rem;
+		// color: var(--ur-color-coral, #ff6c58);
+	}*/
+
+	.hint {
+		font-size: 0.875rem;
+		color: var(--ur-color-gray-dark);
+	}
+
+	.hint.error {
 		color: var(--ur-color-coral, #ff6c58);
 	}
 
-	/* Spinner state */
 	:host([loading]) .input-field {
 		padding-right: 2.75rem;
 	}
 
-	.input-spinner {
+	/* Error icon state */
+	:host([invalid]) .input-field {
+		padding-right: 2.75rem;
+	}
+
+	.input-spinner,
+	.input-error-icon {
 		position: absolute;
 		right: 0.75rem;
 		pointer-events: none;

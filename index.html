@@ -92,7 +92,15 @@
 					readonly
 				></ur-input>
 				<ur-input label="Disabled" disabled value="Cannot edit this"></ur-input>
-				<ur-input label="With error" error="Invalid email address"></ur-input>
+				<ur-input
+					label="With error"
+					hint="Please enter a valid email"
+					invalid
+				></ur-input>
+				<ur-input
+					label="With hint"
+					hint="Your password must be 12 characters long"
+				></ur-input>
 				<ur-input
 					label="Spinner"
 					value="Processing something"

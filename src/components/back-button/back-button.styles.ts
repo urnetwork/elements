@@ -21,10 +21,4 @@ export const backBtnStyles = css`
 	button:hover {
 		color: var(--ur-color-green);
 	}
-
-	svg {
-		width: 24px;
-		height: 24px;
-		flex-shrink: 0;
-	}
 `;
