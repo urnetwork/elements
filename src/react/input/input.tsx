@@ -6,7 +6,6 @@ import {
 	type InputType,
 } from "../../components/input/input.js";
 
-// Create the React component wrapper
 export const Input = createComponent({
 	tagName: "ur-input",
 	elementClass: UrInputElement,
@@ -29,9 +28,10 @@ export interface InputProps {
 	disabled?: boolean;
 	readonly?: boolean;
 	loading?: boolean;
+	invalid?: boolean;
 	name?: string;
 	label?: string;
-	error?: string;
+	hint?: string;
 	required?: boolean;
 	onInput?: (e: CustomEvent<InputChangeDetail>) => void;
 	onChange?: (e: CustomEvent<InputChangeDetail>) => void;
@@ -39,7 +39,6 @@ export interface InputProps {
 	style?: React.CSSProperties;
 }
 
-// Typed wrapper component
 export const UrInput = React.forwardRef<UrInputElement, InputProps>(
 	(props, ref) => {
 		const { onInput, onChange, ...rest } = props;
