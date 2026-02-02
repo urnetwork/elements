@@ -2,6 +2,7 @@ import { LitElement, html } from "lit";
 import { customElement, property } from "lit/decorators.js";
 import { inputStyles } from "./input.styles";
 import "../spinner";
+import "../icons/icon-warning";
 
 export const INPUT_TYPES = [
 	"text",
@@ -26,7 +27,8 @@ export class Input extends LitElement {
 	@property({ type: Boolean, reflect: true }) loading = false;
 	@property({ type: String }) name = "";
 	@property({ type: String }) label = "";
-	@property({ type: String }) error = "";
+	@property({ type: String }) hint = "";
+	@property({ type: Boolean, reflect: true }) invalid = false;
 	@property({ type: Boolean, reflect: true }) required = false;
 
 	// Event handler for input changes
@@ -61,7 +63,7 @@ export class Input extends LitElement {
 		return html`
 			<div class="input-wrapper">
 				${this.label
-					? html`<label class="input-label">
+					? html`<label class="input-label ${this.invalid ? "error" : ""}">
 							${this.label}
 							${this.required ? html`<span class="required">*</span>` : ""}
 						</label>`
@@ -76,7 +78,7 @@ export class Input extends LitElement {
 						?readonly=${this.readonly}
 						?required=${this.required}
 						name=${this.name}
-						class="input-field ${this.error ? "error" : ""}"
+						class="input-field ${this.invalid ? "error" : ""}"
 						@input=${this.handleInput}
 						@change=${this.handleChange}
 					/>
@@ -84,10 +86,18 @@ export class Input extends LitElement {
 					${this.loading
 						? html`<ur-spinner class="input-spinner" size="8"></ur-spinner>`
 						: ""}
+					${this.invalid && !this.loading
+						? html`<ur-icon-warning
+								class="input-error-icon"
+								style="color: var(--ur-color-coral)"
+							></ur-icon-warning>`
+						: ""}
 				</div>
 
-				${this.error
-					? html`<span class="error-message">${this.error}</span>`
+				${this.hint
+					? html`<span class="hint ${this.invalid ? "error" : ""}"
+							>${this.hint}</span
+						>`
 					: ""}
 			</div>
 		`;
