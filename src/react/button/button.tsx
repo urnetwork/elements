@@ -3,6 +3,9 @@ import { createComponent } from "@lit/react";
 import {
 	Button as UrButtonElement,
 	BUTTON_TYPES,
+	BUTTON_VARIANTS,
+	type ButtonVariant,
+	type ButtonType,
 } from "../../components/button/button.js";
 
 // Create the React component wrapper
@@ -16,7 +19,8 @@ export const Button = createComponent({
 });
 
 export interface ButtonProps {
-	variant?: (typeof BUTTON_TYPES)[number];
+	variant?: ButtonVariant;
+	buttonType?: ButtonType;
 	disabled?: boolean;
 	fullWidth?: boolean;
 	loading?: boolean;
@@ -35,5 +39,11 @@ export const UrButton = React.forwardRef<UrButtonElement, ButtonProps>(
 
 UrButton.displayName = "UrButton";
 
-export { UrButtonElement, BUTTON_TYPES };
+export {
+	UrButtonElement,
+	BUTTON_TYPES,
+	BUTTON_VARIANTS,
+	type ButtonVariant,
+	type ButtonType,
+};
 export default UrButton;
