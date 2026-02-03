@@ -59,6 +59,19 @@ export class Input extends LitElement {
 		);
 	}
 
+	private handleKeyDown(e: KeyboardEvent) {
+		if (e.key === "Enter") {
+			const form = this.closest("form");
+			if (form) {
+				e.preventDefault();
+				// Defer form submission to next tick to allow React state updates to complete
+				setTimeout(() => {
+					form.requestSubmit();
+				}, 10);
+			}
+		}
+	}
+
 	render() {
 		return html`
 			<div class="input-wrapper">
@@ -81,6 +94,7 @@ export class Input extends LitElement {
 						class="input-field ${this.invalid ? "error" : ""}"
 						@input=${this.handleInput}
 						@change=${this.handleChange}
+						@keydown=${this.handleKeyDown}
 					/>
 
 					${this.loading
