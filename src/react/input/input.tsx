@@ -33,6 +33,8 @@ export interface InputProps {
 	label?: string;
 	hint?: string;
 	required?: boolean;
+	minLength?: number;
+	maxLength?: number;
 	onInput?: (e: CustomEvent<InputChangeDetail>) => void;
 	onChange?: (e: CustomEvent<InputChangeDetail>) => void;
 	className?: string;
