@@ -30,6 +30,8 @@ export class Input extends LitElement {
 	@property({ type: String }) hint = "";
 	@property({ type: Boolean, reflect: true }) invalid = false;
 	@property({ type: Boolean, reflect: true }) required = false;
+	@property({ type: Number }) minLength?: number;
+	@property({ type: Number }) maxLength?: number;
 
 	// Event handler for input changes
 	private handleInput(e: InputEvent) {
@@ -90,6 +92,8 @@ export class Input extends LitElement {
 						?disabled=${this.disabled || this.loading}
 						?readonly=${this.readonly}
 						?required=${this.required}
+						minlength=${this.minLength ?? ""}
+						maxlength=${this.maxLength ?? ""}
 						name=${this.name}
 						class="input-field ${this.invalid ? "error" : ""}"
 						@input=${this.handleInput}
