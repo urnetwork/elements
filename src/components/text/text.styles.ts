@@ -16,8 +16,8 @@ export const textStyles = css`
 	/* Header variant - maps to h1 */
 	:host([variant="header"]) .text {
 		font-family: "AbcGravityExtended", system-ui, sans-serif;
-		font-size: 2.5rem; /* 40px */
-		line-height: 1.2;
+		font-size: 2.2rem; /* 40px */
+		/*line-height: 1.2;*/
 		font-weight: normal;
 		margin: 0;
 	}
@@ -26,7 +26,7 @@ export const textStyles = css`
 	:host([variant="subheader"]) .text {
 		font-family: "AbcGravityExtraCondensed", system-ui, sans-serif;
 		font-size: 2rem; /* 32px */
-		line-height: 1.3;
+		/*line-height: 1.3;*/
 		font-weight: normal;
 		margin: 0;
 	}
@@ -36,7 +36,7 @@ export const textStyles = css`
 	:host(:not([variant])) .text {
 		font-family: var(--ur-font-family-base);
 		font-size: 1rem; /* 16px */
-		line-height: 1.5;
+		/*line-height: 1.5;*/
 		font-weight: normal;
 		margin: 0;
 	}
@@ -45,7 +45,7 @@ export const textStyles = css`
 	:host([variant="small"]) .text {
 		font-family: var(--ur-font-family-base);
 		font-size: 0.875rem; /* 14px */
-		line-height: 1.4;
+		/*line-height: 1.4;*/
 		font-weight: normal;
 		margin: 0;
 	}
