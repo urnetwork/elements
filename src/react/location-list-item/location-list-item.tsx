@@ -12,7 +12,7 @@ export const LocationListItem = createComponent({
 });
 
 export interface LocationListItemProps {
-	color?: string;
+	locationKey: string;
 	name?: string;
 	providerCount?: number;
 	unstable?: boolean;

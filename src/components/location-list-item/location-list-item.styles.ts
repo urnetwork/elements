@@ -13,14 +13,18 @@ export const locationListStyles = css`
 		justify-content: space-between;
 		width: 100%;
 		box-sizing: border-box;
-		padding: 10px;
+		padding: var(--ur-space-sm) var(--ur-space-md);
 		border-top: 1px solid var(--ur-color-border);
 		cursor: pointer;
-		/*transition: background-color 0.3s;*/
+		transition: background-color 0.15s;
 	}
 
 	.location-list-item:hover {
-		/*background-color: #f5f5f5;*/
+		background-color: color-mix(
+			in srgb,
+			var(--ur-color-black, #101010),
+			#fff 2%
+		);
 	}
 
 	.leading-list-item-content {
