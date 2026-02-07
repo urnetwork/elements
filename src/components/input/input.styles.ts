@@ -43,8 +43,7 @@ export const inputStyles = css`
 		font-size: 1rem;
 		color: var(--ur-color-black, #000);
 		background: color-mix(in srgb, var(--ur-color-black, #101010), #fff 5%);
-		border: 1px solid
-			color-mix(in srgb, var(--ur-color-black, #101010), #fff 10%);
+		border: 1px solid var(--ur-color-border);
 		border-radius: 0.5rem;
 		transition:
 			border-color 0.1s ease,
@@ -57,11 +56,12 @@ export const inputStyles = css`
 	/* Hover state */
 	.input-field:hover:not([disabled]):not([readonly]) {
 		background: color-mix(in srgb, var(--ur-color-black, #101010), #fff 7%);
-		border-color: color-mix(in srgb, var(--ur-color-black, #101010), #fff 12%);
+		border-color: color-mix(in srgb, var(--ur-color-border, #101010), #fff 2%);
 	}
 
 	.input-field:focus {
 		background: color-mix(in srgb, var(--ur-color-black, #101010), #fff 10%);
+
 		border: 1px solid
 			color-mix(in srgb, var(--ur-color-black, #101010), #fff 15%);
 	}

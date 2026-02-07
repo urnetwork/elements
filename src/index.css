@@ -52,6 +52,11 @@ html {
 	--ur-color-maroon: #421006;
 	--ur-color-gray: #b7b7b7;
 	--ur-color-gray-dark: #909090;
+	--ur-color-border: color-mix(
+		in srgb,
+		var(--ur-color-black, #101010),
+		#fff 10%
+	);
 
 	/**
    * Spacing Scale

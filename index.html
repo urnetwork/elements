@@ -82,6 +82,7 @@
 					flex-direction: column;
 					gap: 32px;
 					max-width: 300px;
+					margin-bottom: var(--ur-space-lg);
 				"
 			>
 				<ur-input label="Text" placeholder="Enter some text"></ur-input>
@@ -107,6 +108,43 @@
 					loading
 				></ur-input>
 			</div>
+
+			<!-- Locations List -->
+			<h2
+				style="
+					font-family: PpNeueBitBold, system-ui, sans-serif;
+					color: var(--ur-color-white);
+				"
+			>
+				Locations List
+			</h2>
+
+			<ul>
+				<ur-location-list-item
+					color="#CC3363"
+					name="United States"
+					providerCount="1234567"
+				></ur-location-list-item>
+				<ur-location-list-item
+					color="#CC3363"
+					name="Germany"
+					providerCount="123456"
+					strongPrivacy
+				></ur-location-list-item>
+				<ur-location-list-item
+					color="#A6A57A"
+					name="Mexico"
+					providerCount="2345"
+					unstable
+				></ur-location-list-item>
+				<ur-location-list-item
+					color="#A6A57A"
+					name="France"
+					providerCount="98"
+					strongPrivacy
+					unstable
+				></ur-location-list-item>
+			</ul>
 		</div>
 	</body>
 </html>

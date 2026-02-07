@@ -7,3 +7,4 @@ export { default as UrButton } from "./button";
 export { default as UrInput } from "./input";
 export { default as UrText } from "./text";
 export { default as UrBackButton } from "./back-button";
+export { default as UrLocationListItem } from "./location-list-item";
