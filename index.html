@@ -50,8 +50,34 @@
 				Icons
 			</h2>
 
-			<div>
+			<div
+				class="icon-row"
+				style="display: flex; gap: 16px; margin-bottom: 16px"
+			>
 				<ur-icon-spinner></ur-icon-spinner>
+			</div>
+
+			<h2
+				style="
+					font-family: PpNeueBitBold, system-ui, sans-serif;
+					color: var(--ur-color-white);
+				"
+			>
+				Menu
+			</h2>
+
+			<div
+				class="icon-row"
+				style="display: flex; gap: 16px; margin-bottom: 16px"
+			>
+				<ur-menu>
+					<ur-menu-button slot="button">
+						<ur-icon-hamburger></ur-icon-hamburger>
+					</ur-menu-button>
+					<ur-menu-item><ur-text>Profile</ur-text></ur-menu-item>
+					<ur-menu-item><ur-text>Settings</ur-text></ur-menu-item>
+					<ur-menu-item><ur-text>Logout</ur-text></ur-menu-item>
+				</ur-menu>
 			</div>
 
 			<!-- Buttons -->

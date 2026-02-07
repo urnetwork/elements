@@ -14,9 +14,12 @@ export const locationListStyles = css`
 		width: 100%;
 		box-sizing: border-box;
 		padding: var(--ur-space-sm) var(--ur-space-md);
-		border-top: 1px solid var(--ur-color-border);
 		cursor: pointer;
 		transition: background-color 0.15s;
+	}
+
+	:host(:not(:first-child)) .location-list-item {
+		border-top: 1px solid var(--ur-color-border);
 	}
 
 	.location-list-item:hover {
