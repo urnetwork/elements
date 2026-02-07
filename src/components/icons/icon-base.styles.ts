@@ -3,8 +3,6 @@ import { css } from "lit";
 export const iconBaseStyles = css`
 	:host {
 		display: inline-block;
-		/*width: 1em;
-		height: 1em;*/
 	}
 
 	svg {

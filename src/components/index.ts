@@ -4,3 +4,4 @@ export * from "./spinner";
 export * from "./text";
 export * from "./back-button";
 export * from "./location-list-item";
+export * from "./icons";
