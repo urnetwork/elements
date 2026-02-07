@@ -8,13 +8,13 @@ export const MenuItem = createComponent({
 	elementClass: UrMenuItemElement,
 	react: React,
 	events: {
-		onUrMenuItemClick: "ur-menu-item-click",
+		onMenuItemClick: "ur-menu-item-click",
 	},
 });
 
 export interface MenuItemProps {
 	disabled?: boolean;
-	onUrMenuItemClick?: (e: Event) => void;
+	onMenuItemClick?: (e: Event) => void;
 	children?: React.ReactNode;
 	className?: string;
 	style?: React.CSSProperties;
