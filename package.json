@@ -33,6 +33,7 @@
 		"build:demo": "vite build --mode demo",
 		"preview": "vite preview",
 		"prepublishOnly": "npm run build",
+		"release:beta": "npm version prerelease --preid=beta && npm publish --tag beta",
 		"release:patch": "npm version patch && npm publish",
 		"release:minor": "npm version minor && npm publish",
 		"release:major": "npm version major && npm publish"
