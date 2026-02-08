@@ -90,14 +90,10 @@ export const inputStyles = css`
 		border-color: color-mix(in srgb, var(--ur-color-coral, #ff6c58), #fff 15%);
 	}
 
-	/*.error-message {
-		font-size: 0.875rem;
-		// color: var(--ur-color-coral, #ff6c58);
-	}*/
-
 	.hint {
 		font-size: 0.875rem;
 		color: var(--ur-color-gray-dark);
+		text-align: left;
 	}
 
 	.hint.error {

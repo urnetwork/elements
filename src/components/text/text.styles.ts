@@ -16,8 +16,8 @@ export const textStyles = css`
 	/* Header variant - maps to h1 */
 	:host([variant="header"]) .text {
 		font-family: "AbcGravityExtended", system-ui, sans-serif;
-		font-size: 2.2rem; /* 40px */
-		/*line-height: 1.2;*/
+		font-size: 2.2rem;
+		line-height: 2.4rem;
 		font-weight: normal;
 		margin: 0;
 	}
