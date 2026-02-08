@@ -1,6 +1,20 @@
 {
 	"name": "@urnetwork/elements",
-	"version": "0.0.0",
+	"author": "URnetwork <support@urnetwork.com> (https://urnetwork.com)",
+	"license": "ISC",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/urnetwork/elements.git"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"description": "A collection of web components and React components for building URnetwork interfaces.",
+	"homepage": "https://ur.io",
+	"bugs": {
+		"url": "https://github.com/urnetwork/elements/issues"
+	},
+	"version": "0.0.0-beta.1",
 	"type": "module",
 	"exports": {
 		"./styles.css": "./dist/assets/styles.css",
@@ -17,8 +31,17 @@
 		"dev": "vite",
 		"build": "vite build",
 		"build:demo": "vite build --mode demo",
-		"preview": "vite preview"
+		"preview": "vite preview",
+		"prepublishOnly": "npm run build",
+		"release:patch": "npm version patch && npm publish",
+		"release:minor": "npm version minor && npm publish",
+		"release:major": "npm version major && npm publish"
 	},
+	"files": [
+		"dist",
+		"README.md",
+		"LICENSE"
+	],
 	"devDependencies": {
 		"@lit/react": "^1.0.0",
 		"@types/node": "^20.0.0",
