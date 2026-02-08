@@ -2,6 +2,7 @@
 	"name": "@urnetwork/elements",
 	"author": "URnetwork <support@ur.io> (https://ur.io)",
 	"license": "ISC",
+	"version": "0.0.1-beta.1",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/urnetwork/elements.git"
@@ -14,7 +15,6 @@
 	"bugs": {
 		"url": "https://github.com/urnetwork/elements/issues"
 	},
-	"version": "0.0.0-beta.1",
 	"type": "module",
 	"exports": {
 		"./styles.css": "./dist/assets/styles.css",
@@ -33,6 +33,7 @@
 		"build:demo": "vite build --mode demo",
 		"preview": "vite preview",
 		"prepublishOnly": "npm run build",
+		"release:beta": "npm version prerelease --preid=beta && npm publish --tag beta",
 		"release:patch": "npm version patch && npm publish",
 		"release:minor": "npm version minor && npm publish",
 		"release:major": "npm version major && npm publish"
