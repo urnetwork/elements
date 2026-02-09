@@ -12,6 +12,7 @@ export const locationListStyles = css`
 		align-items: center;
 		justify-content: space-between;
 		width: 100%;
+		min-height: 3.6rem;
 		box-sizing: border-box;
 		padding: var(--ur-space-sm) var(--ur-space-md);
 		cursor: pointer;
