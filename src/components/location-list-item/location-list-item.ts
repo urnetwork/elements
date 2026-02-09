@@ -32,10 +32,14 @@ export class LocationListItem extends LitElement {
 
 					<div class="location-text-content">
 						<ur-text variant="body">${this.name}</ur-text>
-						<ur-text variant="small" color="var(--ur-color-gray)">
-							${this.formatNumber(this.providerCount)}
-							provider${this.providerCount === 1 ? "" : "s"}
-						</ur-text>
+						${this.providerCount > 0
+							? html`
+									<ur-text variant="small" color="var(--ur-color-gray)">
+										${this.formatNumber(this.providerCount)}
+										provider${this.providerCount === 1 ? "" : "s"}
+									</ur-text>
+								`
+							: null}
 					</div>
 				</div>
 
