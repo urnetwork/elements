@@ -25,6 +25,7 @@ https://pangrampangram.com/products/neue-montreal
 
 - Make sure everything is committed and pushed to the main branch.
 - If you're not already, login to npm with `npm login`.
+- `npm run build` to build the package.
 - Run `npm pack --dry-run` to see what will be included in the package.
 - If everything looks good, run `npm run release:patch` to publish the package. There are also `release:beta`, `release:minor`, and `release:major` scripts available for versioning.
 - Tag it on Github after publishing like `git tag vx.y.z` and `git push --tags`.
