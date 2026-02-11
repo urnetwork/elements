@@ -67,8 +67,10 @@ export const btnStyles = css`
 		display: none;
 		position: absolute;
 		left: 50%;
-		transform: translateX(-50%);
+		top: 50%;
+		transform: translate(-50%, -50%);
 	}
+
 	:host([loading]) .button-content {
 		visibility: hidden;
 	}
