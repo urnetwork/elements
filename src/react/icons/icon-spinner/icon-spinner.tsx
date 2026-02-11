@@ -2,7 +2,6 @@ import * as React from "react";
 import { createComponent } from "@lit/react";
 import { IconSpinner as UrIconSpinnerElement } from "../../../components/icons/icon-spinner";
 
-// Create the React component wrapper
 export const IconSpinner = createComponent({
 	tagName: "ur-icon-spinner",
 	elementClass: UrIconSpinnerElement,
@@ -11,11 +10,14 @@ export const IconSpinner = createComponent({
 
 export interface IconSpinnerProps {
 	iconTitle?: string;
+	/** Size in rem units. Defaults to 1.6 */
+	size?: number;
+	/** Color override (e.g. "white", "#ff0000"). If undefined, inherits from parent or uses default gray. */
+	color?: string;
 	className?: string;
 	style?: React.CSSProperties;
 }
 
-// Typed wrapper component
 export const UrIconSpinner = React.forwardRef<
 	UrIconSpinnerElement,
 	IconSpinnerProps
