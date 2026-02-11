@@ -2,12 +2,11 @@ import { css } from "lit";
 
 export const iconLoadingStyles = css`
 	:host {
-		width: 1.6em;
-		height: 1.6em;
+		width: auto;
+		height: auto;
 	}
 
 	svg {
-		color: var(--ur-color-gray-dark);
 		transform-origin: center;
 		animation: loading-step 1s steps(8, end) infinite;
 	}

@@ -10,12 +10,20 @@ export class IconSpinner extends LitElement {
 
 	@property({ type: String }) iconTitle?: string;
 
+	@property({ type: Number }) size: number = 1.6;
+
+	@property({ type: String }) color: string = "var(--ur-color-gray-dark)";
+
 	render() {
+		// Apply size directly to the SVG
+		const style = `width: ${this.size}rem; height: ${this.size}rem; color: ${this.color};`;
+
 		return html`
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 32 32"
 				id="Interface-Essential-Loading-Circle-2--Streamline-Pixel"
+				style="${style}"
 			>
 				<desc>
 					Interface Essential Loading Circle 2 Streamline Icon:

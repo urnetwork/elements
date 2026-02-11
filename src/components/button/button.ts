@@ -1,6 +1,6 @@
 import { LitElement, html } from "lit";
 import { customElement, property } from "lit/decorators.js";
-import "../spinner";
+import "../icons/icon-spinner";
 import { btnStyles } from "./button.styles";
 
 export const BUTTON_VARIANTS = ["primary", "secondary"] as const;
@@ -42,9 +42,12 @@ export class Button extends LitElement {
 				?disabled=${this.disabled || this.loading}
 			>
 				<span class="button-content"><slot></slot></span>
-				<span class="button-spinner"
-					><ur-spinner size=${8} color="white"></ur-spinner
-				></span>
+				<span class="button-spinner">
+					<ur-icon-spinner
+						size=${1}
+						color="var(--ur-color-white)"
+					></ur-icon-spinner>
+				</span>
 			</button>
 		`;
 	}
