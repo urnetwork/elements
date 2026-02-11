@@ -1,8 +1,8 @@
 import { LitElement, html } from "lit";
 import { customElement, property } from "lit/decorators.js";
 import { inputStyles } from "./input.styles";
-import "../spinner";
 import "../icons/icon-warning";
+import "../icons/icon-spinner";
 
 export const INPUT_TYPES = [
 	"text",
@@ -102,7 +102,7 @@ export class Input extends LitElement {
 					/>
 
 					${this.loading
-						? html`<ur-spinner class="input-spinner" size="8"></ur-spinner>`
+						? html`<ur-icon-spinner class="input-spinner" size="0.8"></ur-spinner>`
 						: ""}
 					${this.invalid && !this.loading
 						? html`<ur-icon-warning
