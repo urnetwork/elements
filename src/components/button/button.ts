@@ -22,7 +22,7 @@ export class Button extends LitElement {
 
 	@property({ type: Boolean, reflect: true }) fullWidth = false;
 
-	@property({ type: Boolean }) loading: boolean = false;
+	@property({ type: Boolean, reflect: true }) loading: boolean = false;
 
 	@property({ type: String }) buttonType: ButtonType = "button";
 
